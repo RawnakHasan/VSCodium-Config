@@ -1,0 +1,56 @@
+// Place your key bindings in this file to override the defaults
+[
+	//Disabled
+	{
+		"key": "ctrl+n",
+		"command": "-workbench.action.chat.newChat",
+		"when": "chatIsEnabled && inChat"
+	},
+	{
+		"key": "ctrl+n",
+		"command": "-workbench.action.openChat",
+		"when": "chatIsEnabled && inChat && inChatEditor"
+	},
+	{
+		"key": "ctrl+n",
+		"command": "-chatEditor.action.undoHunk",
+		"when": "chatEdits.hasEditorModifications && editorFocus && !chatEdits.isCurrentlyBeingModified || chatEdits.hasEditorModifications && notebookCellListFocused && !chatEdits.isCurrentlyBeingModified"
+	},
+	{
+		"key": "ctrl+n",
+		"command": "-workbench.action.files.newUntitledFile"
+	},
+	{
+		"key": "ctrl+shift+n",
+		"command": "-chatEditor.action.reject",
+		"when": "chatEdits.hasEditorModifications && editorFocus && !chatEdits.isCurrentlyBeingModified || chatEdits.hasEditorModifications && notebookEditorFocused && !chatEdits.isCurrentlyBeingModified"
+	},
+	{
+		"key": "ctrl+shift+n",
+		"command": "-inlineChat2.undo",
+		"when": "inlineChatHasEditsAgent && inlineChatVisible && !chatEdits.isRequestInProgress"
+	},
+	{
+		"key": "ctrl+shift+n",
+		"command": "-workbench.action.newWindow"
+	},
+	// Enabled
+	{
+		"key": "ctrl+n",
+		"command": "explorer.newFile"
+	},
+	{
+		"key": "ctrl+shift+n",
+		"command": "explorer.newFolder"
+	},
+	{
+		"key": "ctrl+shift+s",
+		"command": "workbench.action.toggleStatusbarVisibility",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+shift+m",
+		"command": "editor.action.toggleMinimap",
+		"when": "editorTextFocus"
+	}
+]
